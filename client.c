@@ -26,7 +26,7 @@ int main(int argc, char * argv[])
     int server_pid;
     char* message;
 
-    int  i;
+    size_t  i;
     if (argc != 3)
     {
         ft_printf("Usage: %s <server_pid> <message>\n", argv[0]);
