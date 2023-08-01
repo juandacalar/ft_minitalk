@@ -44,5 +44,6 @@ int main(int argc, char * argv[])
         send_char(server_pid, message[i]);
         i++;
     }
+    send_char(server_pid, '\n');
     return (0);
 }

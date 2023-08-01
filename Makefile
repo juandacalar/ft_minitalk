@@ -19,6 +19,6 @@ clean:
 fclean: clean
 	@make fclean -s -C $(PRINTF)
 	@rm -f $(SERVER) $(CLIENT)
-	@echo "Server and Client Have Been Cleaned Successfully"
+	@echo "Both Server and Client have been cleaned"
 
 re: fclean all
