@@ -29,7 +29,6 @@ void	process_character(void)
 	{
 		ft_printf("%c", g_server.character);
 	}
-	fflush(stdout);
 	g_server.character = 0;
 	g_server.bit_count = 0;
 }
