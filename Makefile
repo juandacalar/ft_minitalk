@@ -3,14 +3,16 @@ CLIENT = client
 
 CFLAGS = -Wall -Werror -Wextra
 CC = gcc
-FLAGS = -Wall -Wextra -Werror -I$(PRINTF)/headers -L$(PRINTF) -lftprintf
+FLAGS = -Wall -Wextra -Werror -I$(PRINTF)/headers
 
-PRINTF = ft_printf
+PRINTF = ft_printf/
+
+LDFLAGS = -L$(PRINTF) -lftprintf
 
 all:
 	@make -s -C $(PRINTF)
-	@gcc $(FLAGS) server.c -o $(SERVER)
-	@gcc $(FLAGS) client.c -o $(CLIENT)
+	@gcc $(FLAGS) server.c -o $(SERVER) $(LDFLAGS)
+	@gcc $(FLAGS) client.c -o $(CLIENT) $(LDFLAGS)
 	@echo "Server And Client Are Ready!"
 
 clean:
